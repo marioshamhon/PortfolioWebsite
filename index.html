@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/copyrightScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="scripts/splide.js"></script>
+    <script src="https://kit.fontawesome.com/26a63f0e22.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+    <title>Mario Shamhon Portfolio</title>
+</head>
+<body>
+    <div id="main-container">
+        <header>
+            <nav>
+                <div class="nav-left-side">
+                    <a href="#about-me-section"> Mario Shamhon</a>
+                </div>
+                <ul class="nav-right-side">
+                    <li><a href="#about-me-section"> About me</a></li>
+                    <li><a href="#projects-section"> Projects</a></li>
+                    <li><a href="#skills-section"> Skills</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about-me-section">
+            <h2>Hi everyone I'm Mario</h2>
+            <div class="headshot">
+                <picture>
+                    <img src="images/headshot.jpg" alt="headshot">
+                </picture>
+            </div>
+            <div class="bio">
+                <p>
+                    Hi all! I'm Mario I recently graduated from San Diego State University with a masters degree in computer Science I really enjoy 
+                    all types of software development I am always experimenting to learn new technologies and programming languages. We can only fail if we don't 
+                    try!   
+                </p>
+                <br>
+                <p>
+                    Apart from coding I enjoy working out or trying out new restaurants  
+                </p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/marioshamhon" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mario-shamhon-2224a9b7/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </section>
+
+        <div class="projects-skills-container">
+            <section id="projects-section">
+                <h2>ProJects</h2>
+                <!-- Swiper Container -->
+                <div class="splide" id="project-slider" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                        <!-- Project 1 -->
+                            <li class="splide__slide">
+                                <div class="project-card">
+                                    <a href="https://github.com/marioshamhon/cs648assignment13/" target="_blank">
+                                        <img src="images/inventory_management_project.webp" alt="Inventory Management System: React">
+                                        <h3>Inventory Management System: React </h3>
+                                        <p>
+                                            This is an Inventory Management System made using React as the frontend and Express Server 
+                                            along with MongoDB for the backend. You can view, add, delete, or update product inventory
+                                            that are all managed a database I created using MongoDB. 
+                                        </p>
+                                    </a>    
+                                </div>
+                            </li>
+                            <!-- Project 2 -->
+                            <li class="splide__slide">
+                                <div class="project-card">
+                                    <a href="https://github.com/marioshamhon/RedNosePirate/" target="_blank">
+                                        <img src="images/red_nose_project.webp" alt="Red Nose Pirate">
+                                        <h3>Red Nose Pirate: C#</h3>
+                                        <p>
+                                            This was a platformer game I developed with a group of my peers.  
+                                            I was responsible for level design and enemy character programming and behavior.
+                                        </p>
+                                    </a>    
+                                </div>
+                            </li>
+                            <!-- Project 3 -->
+                            <li class="splide__slide">
+                                <div class="project-card">
+                                    <a href="https://github.com/marioshamhon/CS-570-Linux-shell-clone/" target="_blank">
+                                        <img src="images/shell_clone_project.webp" alt="Linux Shell Clone: C">
+                                        <h3>Linux Shell Clone: C</h3>
+                                        <p>
+                                            Developed a functional clone of the Linux shell using C programming language. Implemented features: valid 
+                                            command execution, input/output redirection, pipeline commands, and background commandexecution. Created custom built-in 
+                                            functionalities, including directory changing and error checking. Utilized system calls to ensure correct shell functionality.
+                                        </p>
+                                    </a>    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="skills-section">
+                <h2>Skills</h2>
+                <div class="skills-icons-container">
+                    <i class="fa-brands fa-python"></i>
+                    <i class="fa-brands fa-java"></i>
+                    <i class="fa-solid fa-database"></i>
+                    <i class="fa-brands fa-react"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-bootstrap"></i>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>&copy; <span id="year"></span> Mario Shamhon. All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+</html>

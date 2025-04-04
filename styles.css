@@ -1,0 +1,205 @@
+/* VARIABLES */
+:root {
+    --background-color: #74C0FC;
+    --headings-and-links-color: #1a1c20;
+    /* --sections-background-color: #f8f8f8; */
+    --link-hover-color: #ffffff;
+    --project-card-background-color: #DFDFDF;
+    --sections-background-color: #bb2121; 
+}
+
+/* RESET BROWSER  DEFAULTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ @font-face {
+    font-family: "Sour Gummy";
+    src: url(fonts/SourGummy-Italic-VariableFont_wdth,wght.ttf);
+ }   
+
+
+body{
+    font-family: "Sour Gummy", sans-serif;
+}
+
+#main-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%; 
+}
+
+a {
+    color: var(--headings-and-links-color);
+    text-decoration: none;
+}
+
+nav {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+    padding: 0 3.125rem;
+}
+
+nav .nav-right-side {
+    display: flex;
+    list-style: none;
+}
+
+nav .nav-left-side a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav .nav-right-side a {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0.625rem;
+}
+
+nav .nav-right-side a:hover {
+    color: var(--link-hover-color)
+}
+
+/* General Section Styles */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--sections-background-color);
+}
+
+/* Section Heading Styles */
+section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--headings-and-links-color);
+}
+
+#about-me-section {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0 0 10px 10px;
+}
+
+#about-me-section .headshot {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 1rem;
+    margin-bottom: 2.4rem;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#about-me-section .headshot img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top; /* Moves the image upwards so the head is more visible */
+    transition: transform 0.3s ease;
+}
+
+#about-me-section .headshot img:hover {
+    transform: scale(1.05);
+}
+
+#about-me-section .bio p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+#about-me-section .social-links {
+    font-size: 3rem;
+}
+
+#about-me-section .social-links i {
+    color: var(--background-color);
+}
+
+#about-me-section .social-links a {
+    margin: 0 0.75rem;
+}
+
+.projects-skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.splide {
+    display: grid; /*Needed to make the slideshow a grid so it grow and shrink properly*/
+    width: 90%;  
+}
+
+#projects-section, #skills-section {
+    border-radius: 10px 10px 0 0;
+}
+
+.skills-icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--background-color);
+    font-size: 3rem; 
+    gap: 2rem;
+} 
+
+.project-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    background-color: var(--project-card-background-color);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    max-height: 12.5rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    padding: 1rem 1rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color:  var(--background-color);
+    color: var(--headings-and-links-color);
+    padding: 1rem 0;
+    font-size: 0.875rem;
+}
+
+/* TABLETS IN LANDSCAPE */
+@media (max-width: 63.9375rem) {
+    /* 768px / 16px = 48rem */
+    /* 48rem * 16px = 768px */
+
+    html {
+        /* 15px / 16px = 87.5% */
+        font-size: 87.5%;
+    }
+}
+
+
+
+
+
