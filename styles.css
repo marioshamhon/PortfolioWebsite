@@ -2,10 +2,10 @@
 :root {
     --background-color: #74C0FC;
     --headings-and-links-color: #1a1c20;
-    /* --sections-background-color: #f8f8f8; */
+    --sections-background-color: #DFDFDF;
     --link-hover-color: #ffffff;
-    --project-card-background-color: #DFDFDF;
-    --sections-background-color: #bb2121; 
+    --project-card-background-color: #f8f8f8;
+    /* --sections-background-color: #bb2121;  */
 }
 
 /* RESET BROWSER  DEFAULTS */
@@ -15,10 +15,14 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
  @font-face {
     font-family: "Sour Gummy";
     src: url(fonts/SourGummy-Italic-VariableFont_wdth,wght.ttf);
- }   
+ }
 
 
 body{
@@ -26,6 +30,9 @@ body{
 }
 
 #main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin: 0 auto;
     max-width: 1200px;
     width: 90%; 
@@ -141,15 +148,6 @@ section h2 {
     border-radius: 10px 10px 0 0;
 }
 
-.skills-icons-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--background-color);
-    font-size: 3rem; 
-    gap: 2rem;
-} 
-
 .project-card {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -179,6 +177,17 @@ section h2 {
     padding: 1rem 1rem;
 }
 
+.skills-icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--background-color);
+    font-size: 3.5rem; 
+    gap: 2rem;
+} 
+
+
+
 footer {
     display: flex;
     justify-content: center;
@@ -188,14 +197,80 @@ footer {
     font-size: 0.875rem;
 }
 
-/* TABLETS IN LANDSCAPE */
-@media (max-width: 63.9375rem) {
-    /* 768px / 16px = 48rem */
-    /* 48rem * 16px = 768px */
+/* Extra large screen layout */
+@media (min-width: 2560px) {
+
+    #main-container {
+        justify-content: center;
+    }
+}
+
+/*Big moblie and tablet layout*/
+@media(max-width: 1199px) { 
 
     html {
-        /* 15px / 16px = 87.5% */
-        font-size: 87.5%;
+        font-size: 93.75%;  /*15px base used here*/
+    }
+
+    nav  {
+        flex-direction: column;
+    }
+
+    nav .nav-right-side {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    #about-me-section .headshot {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    #about-me-section .social-links {
+        font-size: 2rem;
+    }
+
+
+    .projects-skills-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    #projects-section {
+        border-radius: 10px;
+    }
+
+    .project-card h3 {
+        font-size: 1rem;
+    }
+
+    .skills-icons-container {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 2rem;
+        padding: 0.5rem 0;
+    }
+}
+
+/*Small moblie layout*/
+@media(max-width: 320px) {
+    
+    html {
+        font-size: 87.5%; /*14px base used here*/
+    }
+
+    section h2 {
+        font-size: 1.4rem; 
+    }
+
+    .skills-icons-container {
+        font-size: 1.8rem;
     }
 }
 
