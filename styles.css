@@ -82,6 +82,7 @@ section {
 
 /* Section Heading Styles */
 section h2 {
+    padding: 1rem 0;
     font-size: 3rem;
     font-weight: 700;
     color: var(--headings-and-links-color);
@@ -142,6 +143,10 @@ section h2 {
 .splide {
     display: grid; /*Needed to make the slideshow a grid so it grow and shrink properly*/
     width: 90%;  
+}
+
+.splide__arrow svg:hover {
+    fill: var(--background-color);
 }
 
 #projects-section, #skills-section {
